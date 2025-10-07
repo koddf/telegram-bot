@@ -31,7 +31,7 @@ async def main():
     print(f"⏰ Saatler: {', '.join(f'{h:02d}:{m:02d}' for h, m in SEND_TIMES)}")
     print("=" * 50)
 
-    client = TelegramClient(SESSION, API_ID, API_HASH)
+    client = TelegramClient('session', API_ID, API_HASH)
     await client.start(phone=PHONE)
     print("✓ Telegram’a giriş yapıldı")
 
