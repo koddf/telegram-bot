@@ -8,7 +8,7 @@ from telethon.errors import FloodWaitError
 API_ID   = int(os.getenv('API_ID'))
 API_HASH = os.getenv('API_HASH')
 PHONE    = os.getenv('PHONE')
-SESSION  = os.getenv('SESSION')          # Telethon session string
+client = TelegramClient('session', API_ID, API_HASH)
 TARGETS  = [int(x) for x in os.getenv('TARGETS', '').split(',') if x]  # çoklu grup
 
 # ---------- RESİMLER (repo kökünde) ----------
